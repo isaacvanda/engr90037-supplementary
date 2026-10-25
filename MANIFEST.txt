@@ -1,0 +1,507 @@
+ENGR90037 final report, supplementary material
+MANIFEST: 449 files, 31502642 bytes (MANIFEST.txt itself not listed)
+
+Sources
+  code/engr900378-fw/    git archive of engr900378-fw commit 510f2f1 (no history, no .git)
+  code/engr900378-dcim/  git archive of engr900378-dcim commit 7f23d93 (no history, no .git)
+  logs/bringup, plate, sheet-check, link, complete/fw-logs, complete/espnow-link-*
+                         from engr900378-fw commit 510f2f1 (logs/ and test_apps/espnow_link/*/logs/)
+  logs/plate2-20261021/  git archive of engr900378-fw branch logs/plate2-20261021 commit 1eae43b
+  logs/sheet/            32 sheet tests from chris_tests_1.zip and chris_tests_2.zip, " (n)" suffix removed from names
+  logs/complete/chris_tests_1.zip, chris_tests_2.zip   the sheet test zips, unmodified
+  tests/                 pytest logs from engr900378-dcim commit 7f23d93 tests/
+  data/demo-20261021/    demo data exports, 21 Oct 2026
+  scope/                 oscilloscope captures, 17 Oct 2026
+  charter/, wcca/, geometry/   project documents, unmodified
+
+Redactions
+  Files below differ from the source commit. Each listed value was replaced by the text REDACTED:
+  the VPS public IPv4 address, two Raspberry Pi LAN IPv4 addresses, and SSH user@IP logins.
+  code/engr900378-dcim/dashboards/tools/DEMO.md  (SSH user@IP x1, VPS IP x5)
+  code/engr900378-dcim/dashboards/tools/README.md  (SSH user@IP x4, VPS IP x1)
+  code/engr900378-dcim/dashboards/tools/demo.sh  (SSH user@IP x1)
+  code/engr900378-dcim/dashboards/tools/mockctl.sh  (SSH user@IP x1)
+  code/engr900378-dcim/dashboards/tools/screens.sh  (SSH user@IP x1)
+  code/engr900378-dcim/dashboards/tools/shot.py  (VPS IP x1)
+  code/engr900378-dcim/dashboards/tools/v2.sh  (SSH user@IP x2)
+  code/engr900378-dcim/gateway/gateway.py  (VPS IP x1)
+  code/engr900378-dcim/pi_gateway/config.example.toml  (VPS IP x1)
+  code/engr900378-dcim/pi_gateway/gateway.py  (VPS IP x1)
+  code/engr900378-dcim/simulator/simulate.py  (VPS IP x1)
+  code/engr900378-dcim/tests/test_pi_gateway.py  (VPS IP x1)
+  code/engr900378-fw/docs/bench/PB4-demo-bench-plan.md  (SSH user@IP x2)
+  code/engr900378-fw/logs/PB4-20261017-05-pi-journal.log  (Pi IP 10.x x1)
+  code/engr900378-fw/logs/PB4-20261017-08-pi-journal-battery-sleep.log  (Pi IP 10.x x1)
+  code/engr900378-fw/logs/PB4-20261020-02-plate-demo-match-pi-journal.log  (SSH user@IP x1)
+  code/engr900378-fw/logs/PB4-20261020-04-plate-demo-match-sheet-swap-pi-journal.log  (SSH user@IP x1)
+  code/engr900378-fw/logs/PB4-20261020-06-plate-demo-match-run3-sheet3-pi-journal.log  (SSH user@IP x1)
+  code/engr900378-fw/logs/PB4-20261020-08-plate-demo-match-run2-sheet-JP4-pi-journal.log  (SSH user@IP x1)
+  code/engr900378-fw/logs/PB4-20261020-11-plate-demo-match-sheet5-JP4-pi-journal.log  (SSH user@IP x1)
+  code/engr900378-fw/logs/PB4-20261020-12-plate-demo-match-sheet5-JP4-vps-ingest.log  (SSH user@IP x1)
+  code/engr900378-fw/logs/PB4-20261020-14-plate-demo-match-sheet5-JP4-battery-pi-journal.log  (SSH user@IP x1)
+  code/engr900378-fw/logs/PB4-20261020-16-plate-demo-match-sheet5-JP4-cold-boot-pi-journal.log  (SSH user@IP x1)
+  logs/complete/fw-logs/PB4-20261017-05-pi-journal.log  (Pi IP 10.x x1)
+  logs/complete/fw-logs/PB4-20261017-08-pi-journal-battery-sleep.log  (Pi IP 10.x x1)
+  logs/complete/fw-logs/PB4-20261020-02-plate-demo-match-pi-journal.log  (SSH user@IP x1)
+  logs/complete/fw-logs/PB4-20261020-04-plate-demo-match-sheet-swap-pi-journal.log  (SSH user@IP x1)
+  logs/complete/fw-logs/PB4-20261020-06-plate-demo-match-run3-sheet3-pi-journal.log  (SSH user@IP x1)
+  logs/complete/fw-logs/PB4-20261020-08-plate-demo-match-run2-sheet-JP4-pi-journal.log  (SSH user@IP x1)
+  logs/complete/fw-logs/PB4-20261020-11-plate-demo-match-sheet5-JP4-pi-journal.log  (SSH user@IP x1)
+  logs/complete/fw-logs/PB4-20261020-12-plate-demo-match-sheet5-JP4-vps-ingest.log  (SSH user@IP x1)
+  logs/complete/fw-logs/PB4-20261020-14-plate-demo-match-sheet5-JP4-battery-pi-journal.log  (SSH user@IP x1)
+  logs/complete/fw-logs/PB4-20261020-16-plate-demo-match-sheet5-JP4-cold-boot-pi-journal.log  (SSH user@IP x1)
+  33 files redacted
+
+Removed from snapshot
+  code/engr900378-dcim/vps/SECURITY_TODO.md
+
+sha256                                                                  bytes  path
+b305176d57608b3359b10c3c900467bbea5f465d6e75084d3969e0c63f40beae      337186  charter/project_charter_racix_matrix.pdf
+36da16852ce3d2790e648e89a05c9fa4551ab38d1690129dc1d8e750f5829a2d        4944  code/engr900378-dcim/.gitignore
+be61632b19f2f142cc042b666566d9e5bc095f701a740d83db74fa83d8921cfb         983  code/engr900378-dcim/README.md
+08af820ac9e91210a958e81b15008394cb3a473a445edbcd272cb3f6a9133d9a       66323  code/engr900378-dcim/dashboards/adzf6hx.json
+129474574a955401783820b00124bb86246bf975e2cb0e3fe2f780473198ba7c        7169  code/engr900378-dcim/dashboards/geometry/build_geometry.py
+32634c2a6d9c3dad1102c20ab9da9baea2f816a3fe81ef0708d1acf1d9f6aba6       23610  code/engr900378-dcim/dashboards/geometry/sensor_board.json
+bba7838070a732c8649182187acbc19b8e45a79932f5a2cf3ad768297f567061      412143  code/engr900378-dcim/dashboards/geometry/sensor_board_overlay.png
+a0d296023312613f64451b3fd68d300bc38fa8912272268e8314ba5985751840      393365  code/engr900378-dcim/dashboards/leak-detection-v2.json
+09eeb99225b7ba3c2715c84326cb576fccdca55d3fbe81753779840ef38040cc        7015  code/engr900378-dcim/dashboards/panels/adzf6hx_panel11_afterRender.js
+02ff602192309a1f0700343846f9e9f750ebafcb5083f167b49a5261edb35d18          25  code/engr900378-dcim/dashboards/panels/adzf6hx_panel11_content.html
+250c8275c87dab483286be39adc042c557a8c2f013253f2a71987cd4ca8c61e8        1038  code/engr900378-dcim/dashboards/panels/adzf6hx_panel5_content.html
+9363afe978fb24084ea8073a70e8f505fc90ffd4f9ff714dcd83f3e6a8276e99         514  code/engr900378-dcim/dashboards/panels/adzf6hx_panel5_helpers.js
+3781da9245aac1bb21df40affe62a8b049d65bb302249913a81d0a87eb7675e8       10554  code/engr900378-dcim/dashboards/panels/adzf6hx_panel6_afterRender.js
+06598421549c413d84dcbf7f4661e795632139d4999c1ca19494294bb7765399          79  code/engr900378-dcim/dashboards/panels/adzf6hx_panel6_content.html
+f7bd43387da3f4d95bea3dc35f581d4de4819e7a42968b42f016bcd26c907db9       36468  code/engr900378-dcim/dashboards/panels/leak-detection-v2_panel100_afterRender.js
+b9f6566be24588a307c8acff6f98159669ccd4e23839f141da43dc712bb1145e          23  code/engr900378-dcim/dashboards/panels/leak-detection-v2_panel100_content.html
+5ac092c9df0c2b5883586c9e200f67128933531f10ace14db6d23d2e1796e482       16416  code/engr900378-dcim/dashboards/panels/leak-detection-v2_panel11_afterRender.js
+a5faa7443177747639922b517f93f471230b8eea51a3e685a7c3443c59f6896b          21  code/engr900378-dcim/dashboards/panels/leak-detection-v2_panel11_content.html
+a191b6544ddf272e4dba691a1c10d6de6967b6ede07a35fdba3f880036d0ec4c       57060  code/engr900378-dcim/dashboards/panels/leak-detection-v2_panel20_afterRender.js
+02106ba84263372d45eecf4db6e8eaede0a61d0d23c95bb2782f7ee4886b6718          20  code/engr900378-dcim/dashboards/panels/leak-detection-v2_panel20_content.html
+a8375b8785c0bc6958c9fe12625a69b3b83562c618644360911987508f4e0359       57060  code/engr900378-dcim/dashboards/panels/leak-detection-v2_panel21_afterRender.js
+cbebc278eb09df0bb7b33f202d6fddcf9e7a081fbb838016c9478e4dcb88c1ea          20  code/engr900378-dcim/dashboards/panels/leak-detection-v2_panel21_content.html
+781dcfcaa7e002ecba49e54014b5ad65fe65c686d5451b98248b5078949b962c       23751  code/engr900378-dcim/dashboards/panels/leak-detection-v2_panel401_afterRender.js
+9aac77ffb2000de2a11b0bf68864eb58f6b49727ca92a6ee0de8c156b71d94b5          20  code/engr900378-dcim/dashboards/panels/leak-detection-v2_panel401_content.html
+cef485e788ad7cb468fec7240cc2cee2a6aa361550423ffe58c8d5ae11d182fe       33757  code/engr900378-dcim/dashboards/panels/leak-detection-v2_panel5_afterRender.js
+62e425f8aee827531eb8f6490aa4f8052ba1bbe6f72ebf00d0f4361ed77c9066          20  code/engr900378-dcim/dashboards/panels/leak-detection-v2_panel5_content.html
+321131c88c369695b114321ac0f52e6391506122d9cafab0e4c5d9d9d8c1a4bf       20059  code/engr900378-dcim/dashboards/panels/leak-detection-v2_panel6_afterRender.js
+390d8717d3a4b006021edee0ec3693eb5e614c4fa5b950b4cc2bdeac638840dd          19  code/engr900378-dcim/dashboards/panels/leak-detection-v2_panel6_content.html
+b454b30db1ea49b10934e6c729b2bc4cd0edcd4528225c07bca440e811540311      536588  code/engr900378-dcim/dashboards/screens/fields/posterior_all.png
+f99d23cfe2bd775510a31e1d9fa2733b6ff151080edc08dc1afb76d7f482eff1       33804  code/engr900378-dcim/dashboards/screens/fields/posterior_cdc1_ch1.png
+520ca8ca54a75baecab7666735ccfff8bba8a0c87c7fdaeecbb31678e4d0ac3b       36226  code/engr900378-dcim/dashboards/screens/fields/posterior_cdc1_ch4.png
+7a32d68c317d7576af1492e487da7f26edc7c36818cf4f56d614d50a9634ae04       40724  code/engr900378-dcim/dashboards/screens/fields/posterior_cdc2_ch2.png
+a84cb04302f212970069de369b7412edbd9a3e73ab9e0dff5417d78c948820c0       38532  code/engr900378-dcim/dashboards/screens/fields/posterior_cdc2_ch3.png
+852886232086304670faa15947457961a0582c58ac95397395a4893da17cd296       38220  code/engr900378-dcim/dashboards/screens/fields/posterior_cdc2_ch4.png
+051a0e1947cbcf2b6317cdf19bc5f074765639aed9ed0630b1efca997bab7c26      112431  code/engr900378-dcim/dashboards/screens/fields/posterior_pyramid_black.png
+36bd11df990eaec06d6c3bb2b63a2e9a10f76cba3c9e75ca8883d6980a1fd590      112114  code/engr900378-dcim/dashboards/screens/fields/posterior_pyramid_green.png
+3b0f27c69e5b704902a0f62828918ec85de7e8e8b1998285cd44b5d6ad720bf9      112494  code/engr900378-dcim/dashboards/screens/fields/posterior_pyramid_yellow.png
+674d9fb0624ec974f01f1e131bb21e1cc5ada6f7a203cfd53d9e4fe7d4aca37d      185931  code/engr900378-dcim/dashboards/screens/heatmap_dry.png
+30ec6caf1e4fd5a3877a083c453d8c6f9a25325ef0af25ca9941da832d5d8f0f       45502  code/engr900378-dcim/dashboards/screens/heatmap_last_leak.png
+ab16a61112233462094b8ff001c5e695120e21cffe9b8f35f2b22714b73895fd      247437  code/engr900378-dcim/dashboards/screens/heatmap_pyramid.png
+9e40fac874e1ab0f4a11b790f52f4e1bab005e3edd87bba0826fc5474ab6fded      302636  code/engr900378-dcim/dashboards/screens/heatmap_pyramid_board.png
+bae49826b8f406d0cd77c297340b9352bd7735a1c8ed574d819aacc58f287bac      212894  code/engr900378-dcim/dashboards/screens/heatmap_rect.png
+4378583d04c349e1edf4b54db408f4b06c17fe803fc2ad76189bc6d653e3c0c3      299434  code/engr900378-dcim/dashboards/screens/heatmap_rect_banner.png
+3d5ac16725c169767b4c71ae4a653658670f66ad4ffa6d1a1239e42b2c356090      244050  code/engr900378-dcim/dashboards/screens/heatmap_ring_board.png
+554493da1ac404d7b09956782a9b5e76797fb91adb04f42d922da983141090c5      320634  code/engr900378-dcim/dashboards/screens/v2_alarm.png
+596285c37ad7301284af1cec43ae3abd4804830f88b12ed0558f7d40b2115388      281736  code/engr900378-dcim/dashboards/screens/v2_cleared.png
+b5328e72f8cec0df56c764f1b27bcdc813c4cc7462746454ac9568e6425ab8a9      280914  code/engr900378-dcim/dashboards/screens/v2_dry.png
+6894ed502d455de5665e857feb1e3ac626371fe7b3868aeddc15fba7d0a7feba      434910  code/engr900378-dcim/dashboards/screens/v2_live_readings.png
+4a33ad5f81d3360ea45483bd4418cf894aed4b9a97bdd100f4c07eee13127dc0      359682  code/engr900378-dcim/dashboards/screens/v2_live_readings_1860.png
+33cae4114452a8fc22b635a3fc81eb0af823a6b230bdcf8833d4e689a096a57b      311541  code/engr900378-dcim/dashboards/screens/v2_rack_mock.png
+16c1c90ec7115d48f94327186e8bf3a87f9c335b3f66158f79ca5ea484c63f99       11552  code/engr900378-dcim/dashboards/tools/DEMO.md
+1c49c612c70f589238fccbc0eefb146021c4b85ffec28bf55273e639ebcde1e5       17954  code/engr900378-dcim/dashboards/tools/README.md
+93d2634e8bd6ca511151096093b4a1106949f04d1b6c85ed11f6e2957f1bf573       55438  code/engr900378-dcim/dashboards/tools/build_v2.py
+c870638436f302048671557a789f0be5368ca90b1aabe0c2867643a5332b528a        2213  code/engr900378-dcim/dashboards/tools/check_queries.py
+be5fda8f5d2c9e151615279d2382928cca7e4dbe91e06cf8418a207803f2a6f8        3000  code/engr900378-dcim/dashboards/tools/demo.sh
+e110bb1baf74fe1678306569d44bc5160e75ea93c1774a1cb720917d8ef5f8f3        6500  code/engr900378-dcim/dashboards/tools/fields.py
+aa9098030d0007ea69bfa63fffa64fc6e3819cf4e360254277688eda6239a4c3        5263  code/engr900378-dcim/dashboards/tools/js/banner.js
+af98e0a8002075c855db66ed92fd081715b7f549a14358353919a3c27ef04924        7362  code/engr900378-dcim/dashboards/tools/js/common.js
+a88c8da9c195b4785c093726c2cb920ef91b7b5a3b19b98ab8c0cbb25a9a8824        4121  code/engr900378-dcim/dashboards/tools/js/geo_board.js
+ae4f4c889f93fdedc8e59a9ce160f7f7c6116eff8ac0aab4522d1292985ece18        2552  code/engr900378-dcim/dashboards/tools/js/last_leak.js
+26b7275d852c2c805440163a856808d933ab4b601b3010ba3d29f01e55e76087       21514  code/engr900378-dcim/dashboards/tools/js/layout.js
+9fac0828003694f7ca44c32d86a0151163a7703367e1bf4d5f0156dd2621ca45       10242  code/engr900378-dcim/dashboards/tools/js/posterior.js
+c7eee7aeeb0d509a59dd5ee9e250e23ad94fa92cd21b3d3009f3e1b0b5c15c8c        6216  code/engr900378-dcim/dashboards/tools/js/rack.js
+8d7ee0b95ce833fd08f41fcf79ded7081cb280a322203dba874c0ba44506b189       13162  code/engr900378-dcim/dashboards/tools/js/replay.js
+9313116fcce7600717cf2ed6cdf4c5631bdd14a553c1b666304f31e1a2e88613        9859  code/engr900378-dcim/dashboards/tools/js/sensor_grid.js
+1d28398648d85f3c0124501ad237781f3a86da136306468e84005c71f8079e3b        1751  code/engr900378-dcim/dashboards/tools/mockctl.sh
+c8a541e672e38ff8b622228fee1b4500925aa9968ba3b3119801a0deee110ee4        2708  code/engr900378-dcim/dashboards/tools/screens.sh
+73f04e382e497483f0f59ddedffe4d88926a6019cebdee81d27800406c77cb2c        3402  code/engr900378-dcim/dashboards/tools/shot.py
+34bc4d8a56b51583c7d997f755120b257332f6e4c9e8cb241a7b9e9ba9ad0472        2592  code/engr900378-dcim/dashboards/tools/v2.sh
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855           0  code/engr900378-dcim/docker/.gitkeep
+afa0b1c1afd2761d1d88585d8287451fbe63ca00e14ddc749530942538c633a8        1307  code/engr900378-dcim/docker/docker-compose.yml
+9fae42f19b986c57d30e72e3f671081192727940912b4dfcea9e4913f986cc79         133  code/engr900378-dcim/docker/mosquitto/config/mosquitto.conf
+98349ce42d058eaf478c465c4b3bb747c99a0feec85aa6496184adc2203286f4        2347  code/engr900378-dcim/docs/context/README.md
+3749300df8b03c9065d3f46b6fca23b0c9172a825267aef4740ff2884d9afff5      606624  code/engr900378-dcim/docs/context/sensor_board_layout.png
+01df670391349f8c55844bb8eac07967f16edcf06afc545a3311870330cdadb4      487058  code/engr900378-dcim/docs/context/sensor_board_layout_pyramid_split.png
+76727a57a54c0b8a2240db703892d43ee1600732ae856b2754c8cdf4eba7f9df        3644  code/engr900378-dcim/gateway/gateway.py
+3370d8a4872fb53af3121d20599365f21d76f65e2d11a171b0671c3513f4e85a          16  code/engr900378-dcim/gateway/requirements.txt
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855           0  code/engr900378-dcim/ingestion/.gitkeep
+01a313fd051db182aefa53ea07607391cd4e85707c62e0a57403861bf7a957b5        3465  code/engr900378-dcim/ingestion/detection.toml
+264213af86895a0fdff9a8b68288ee97f2fe9e4fac3055142c75618cdcd2b299       71832  code/engr900378-dcim/ingestion/ingest.py
+7e7173c279e934d6e7a10ab94226c486fa2c4a87fd0d6002aeb48730ca2d5131        6808  code/engr900378-dcim/ingestion/plates.toml
+8526e53c2d218168e720211770caf73bc76cc63263b7b87f4d9a878bdfbee4e8          41  code/engr900378-dcim/ingestion/requirements.txt
+cd7e302516e105a6f7920051b2d53acc481914ad202e845bd52b6e259b6d42da        3659  code/engr900378-dcim/pi_gateway/README.md
+226ea1bdf71c6e134ee778c1c6f8057be7f57702f7e29cdf3e7680bdde4d9eb7         983  code/engr900378-dcim/pi_gateway/config.example.toml
+23f2afa37e5f1763ba91b97168ff45be8330609ed0e3a47f5d189d22d3031a42       15632  code/engr900378-dcim/pi_gateway/gateway.py
+30324faa877005cbe29c60e9002b71cf42cce054e78659a004ba4a5cb61686e9         580  code/engr900378-dcim/pi_gateway/leak-gateway.service
+730aba9d563b6d533831518b3305d81a69efb89fc125a1a51369be44d733ebca        3995  code/engr900378-dcim/results/pipeline_20261011_1156.csv
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855           0  code/engr900378-dcim/simulator/.gitkeep
+78be440202f1ee6fc653d48c36ff28187f76ea2b40efcfe3a7518a5bda463527        1404  code/engr900378-dcim/simulator/mock.toml
+5f680bece0bd33fcd3df110c1b8bf3bf6a687fc92fad71caf37db2ad8cc75502       40955  code/engr900378-dcim/simulator/mock_plates.py
+9c96ae738f723f1ad806886560499f7daa6603b4ac83275db4756c82ec88ea79        9742  code/engr900378-dcim/simulator/plate_model.py
+99923a6ef615463908d90d24e2d2dd83958e5a095d17a755a9a38610fb01197b       12361  code/engr900378-dcim/simulator/replay.py
+685b1748f676bc4770f4d282847ee9a5ac287db378a548b62b1562675ca4cceb          31  code/engr900378-dcim/simulator/requirements.txt
+eab1c9a344001121cf27587fa6694470a0bc82a61018dc8c51f5dac3ee458931       27266  code/engr900378-dcim/simulator/simulate.py
+87af097ca7de13db89fd16b066fc04c85d89f475134d3276b9b137dd19b1c9c0        1117  code/engr900378-dcim/tests/conftest.py
+119d811f8db2d8644dc18e0617032272ac39bdde17b788cf6ef2a4a593840654        7077  code/engr900378-dcim/tests/fixtures/replay/05_Border_Test.txt
+53bca6a4268119d4ea0cdea6b480e4e9616e6aedc3eecfff680130a8515c841a       17891  code/engr900378-dcim/tests/fixtures/replay/20_Per_PG_Test.txt
+372e30159cf335315d617dccd5b2da625638b4b6946d2df6d1207e3c1d32ac24        5711  code/engr900378-dcim/tests/fixtures/replay/Border_Test.txt
+4ba7a1d9bf97e95cf7fbe4ddc44abe02ca8d00134048eac8f1930d77b8b89146        7355  code/engr900378-dcim/tests/fixtures/replay/IPA_Test.txt
+44d584e7520555f1af22752926c528140faf6b6edd76ed3e634a01dcaa121eea       12098  code/engr900378-dcim/tests/fixtures/replay/Oil_Test.txt
+8e177093abd6eccbf910c49ce42d27b56f6c0e095b5e060019e1d90962876abf        9261  code/engr900378-dcim/tests/fixtures/replay/Water_Test.txt
+bc6946dbf91dca763767d9d4573676fe42ff41e971ca1bc4000fc7e8e5c5974f        4557  code/engr900378-dcim/tests/plate_frames.py
+46eaaacfbfe2d2a570837fff839b1263b6ed8ecb767fa7117e130f342c2b18c1       11148  code/engr900378-dcim/tests/pytest_log_20261010.txt
+d1ac9610cfad988b992e0dbc167085737dc3adc9678d321667f383c45f0d419f       10984  code/engr900378-dcim/tests/pytest_log_20261011.txt
+67627e18ca73123997e8f4b097c031351bbf286f48bb7fd95351627adc831a71       23576  code/engr900378-dcim/tests/pytest_log_20261014.txt
+4b657d0f53e9bc3d208ee69781ba9d8e6acc1e70e60b608de5fc1ff613ea1aef       19574  code/engr900378-dcim/tests/pytest_log_20261018.txt
+14f1b321d3265ee123dec6531a15b7482a72e0fb3fc1b839d3ed06fe57015c15          13  code/engr900378-dcim/tests/requirements.txt
+b91ced5e4ffe507aab4cda19e7382e0ff49eb04dc43791c0f6342c02cdec8d96        5066  code/engr900378-dcim/tests/test_cli.py
+cf08cc8d4096f337c32e0e53b3979e6340aa2fa06870056c805f14a4bcc76cd0        8146  code/engr900378-dcim/tests/test_cmr.py
+a75246729288076efab76ad012e48226496c6dc362a8c9a9cfd7e39408648d52       22675  code/engr900378-dcim/tests/test_detection.py
+707432b4a4e8cc322daaf4359f80d1942039f0505d5c83b380a7f67c60014a24       15799  code/engr900378-dcim/tests/test_ingest.py
+39efa7ce79798746f6f4595d6dcca1c5049da66fda219484226b1fd1366f7408       18729  code/engr900378-dcim/tests/test_ingest_gateway.py
+9ef0d7bf400c3e4392958368375dfe311c0376584fc5032b5087f51dd667727d       22234  code/engr900378-dcim/tests/test_mock_plates.py
+815be1f6f7e633af56f5b075202f96ce18c3a5912cf73584615f4b83490fe2ff        4093  code/engr900378-dcim/tests/test_onesheet.py
+bde0df89b6fe0a65a4dd0070aca1aa4585e7a9e8e9d20e251c00c76de1d0c31c       12349  code/engr900378-dcim/tests/test_pi_gateway.py
+42a38bbda2b03365fa8b42f5d53d5a7c0300a0d1b05ed1d60f6a000e230bdbbb       26298  code/engr900378-dcim/tests/test_replay.py
+f5953fbafe8cd23c290ff773b6ec6a334d3bb0e4eed074885f19849123accbf1        8451  code/engr900378-dcim/tests/test_rig.py
+91acf16fbf95773b5d74ede2daa48af378cdb623fca369457843536ce2faa466       11442  code/engr900378-dcim/tests/test_simulate.py
+c4ebd7f68923cfbdb9ed040f6f9a90544d3847374d0cdc691dd7eb3dc51d5701         117  code/engr900378-dcim/vps/env-example/docker.env
+18f83156b94f1770f769d8513d0ca1b6d1009f569c8df199dafb77381f9d215f          22  code/engr900378-dcim/vps/env-example/ingestion.env
+4e2f09161b1c83c58082ed41afa723cb050d82cd46b0a34dceee5b12b427b891          23  code/engr900378-dcim/vps/env-example/repo-root.env
+7b733e5177b5aa700fa15455e1e7d6b605d9d9009ffedc7200187a0307725f8a        2237  code/engr900378-dcim/vps/grafana/grafana.ini
+910c0585107e3f1f69563c10a3fce0d714dec214c6c9d4d073f30b4b9b673074        3972  code/engr900378-dcim/vps/sync.sh
+d78e24df9aa37e173149a206c585b9e8a92ae8b6c74bf1529759c06c6e8f1068         273  code/engr900378-dcim/vps/systemd/leak-ingest.service
+42901f23f5239bc8b9cff3d140d932e7f745f8574537346a26c009631a16f871          41  code/engr900378-dcim/vps/systemd/leak-ingest.service.d/unbuffered.conf
+ef9f1adb1497af6299c9bab10aa5674042a5ed9a5f8152a2b8634060ecc72dac         774  code/engr900378-dcim/vps/systemd/leak-mock.service
+bc9aed4df53fdc495abacac40e04cb58be5f2ff5a2b65d92e784db8f02ae27aa         287  code/engr900378-fw/.gitignore
+12026a54d9e8872918386c382d3ee0b8d97751602e67dff0020f08d857a286c6         112  code/engr900378-fw/CMakeLists.txt
+713c5d7e5aa292c62044bf6fc33cf0473d30f4319619e881443e840304b5cbb7         190  code/engr900378-fw/apps/gateway/CMakeLists.txt
+fa642294c4a1baf677eb56b66cf558f7d4c6e1701b8166abe11e156b0fb3fa91         288  code/engr900378-fw/apps/gateway/platformio.ini
+dc1a7d1f2c549222fdd98c4e808c3d250c1f443020725f1b4ab14bdc9b8921cc         165  code/engr900378-fw/apps/gateway/sdkconfig.defaults
+56c553c63e59a57c6e6d915e85ef0cbed911159293191b462098ad5fef9ce8ff       78138  code/engr900378-fw/apps/gateway/sdkconfig.gateway
+017acfafb69bacdcf3fa4e9a4f9f52d83a70d7296d9368d4e975431257aaf1ba          82  code/engr900378-fw/apps/gateway/src/CMakeLists.txt
+d4cbe817016a29b2f7a96572e88222720fad652a563f3fd8f7e9c9605d16a76c        9156  code/engr900378-fw/apps/gateway/src/main.c
+5bf9939e1fdb9c6939f125e6f1e4cbcf97d6f27fe2025e0712b7b87a9595fa40         633  code/engr900378-fw/apps/plate/CMakeLists.txt
+d48c873f612881d05bda023da8d6670baca83a420fc7127c3e631736042be4ce        6727  code/engr900378-fw/apps/plate/platformio.ini
+6269a9fb5f033cc08c7a9b60f616fed69a2c0152952cc9a37568b8e2ae51f557       86174  code/engr900378-fw/apps/plate/sdkconfig.plate_demo
+6269a9fb5f033cc08c7a9b60f616fed69a2c0152952cc9a37568b8e2ae51f557       86174  code/engr900378-fw/apps/plate/sdkconfig.plate_demo_hold
+6269a9fb5f033cc08c7a9b60f616fed69a2c0152952cc9a37568b8e2ae51f557       86174  code/engr900378-fw/apps/plate/sdkconfig.plate_demo_match
+6269a9fb5f033cc08c7a9b60f616fed69a2c0152952cc9a37568b8e2ae51f557       86174  code/engr900378-fw/apps/plate/sdkconfig.plate_demo_rig
+6269a9fb5f033cc08c7a9b60f616fed69a2c0152952cc9a37568b8e2ae51f557       86174  code/engr900378-fw/apps/plate/sdkconfig.plate_demo_safe
+6269a9fb5f033cc08c7a9b60f616fed69a2c0152952cc9a37568b8e2ae51f557       86174  code/engr900378-fw/apps/plate/sdkconfig.plate_demo_safe_fixed
+6269a9fb5f033cc08c7a9b60f616fed69a2c0152952cc9a37568b8e2ae51f557       86174  code/engr900378-fw/apps/plate/sdkconfig.plate_demo_seq
+6269a9fb5f033cc08c7a9b60f616fed69a2c0152952cc9a37568b8e2ae51f557       86174  code/engr900378-fw/apps/plate/sdkconfig.plate_demo_settlecheck
+6269a9fb5f033cc08c7a9b60f616fed69a2c0152952cc9a37568b8e2ae51f557       86174  code/engr900378-fw/apps/plate/sdkconfig.plate_demo_tappoll
+6269a9fb5f033cc08c7a9b60f616fed69a2c0152952cc9a37568b8e2ae51f557       86174  code/engr900378-fw/apps/plate/sdkconfig.plate_demo_tappoll_hold
+95582c563475fe0a4d594eeee78b42d90c5775850db5f0696f27c283ce729d93       86307  code/engr900378-fw/apps/plate/sdkconfig.plate_devkit
+e920da54f92b303014fc874d4f46390751700b9ed90c4567a3045c51cc3bfb9e         386  code/engr900378-fw/apps/plate/sdkconfig.plate_devkit.defaults
+6269a9fb5f033cc08c7a9b60f616fed69a2c0152952cc9a37568b8e2ae51f557       86174  code/engr900378-fw/apps/plate/sdkconfig.plate_power_board
+c3d76133a6d4e78921e852219504ff88c65a55de1ecef897f0d222cbb40cc5ac         470  code/engr900378-fw/apps/plate/sdkconfig.plate_power_board.defaults
+6269a9fb5f033cc08c7a9b60f616fed69a2c0152952cc9a37568b8e2ae51f557       86174  code/engr900378-fw/apps/plate/sdkconfig.plate_power_board_serial
+6269a9fb5f033cc08c7a9b60f616fed69a2c0152952cc9a37568b8e2ae51f557       86174  code/engr900378-fw/apps/plate/sdkconfig.plate_power_board_sleep
+bf421aa44364b5f3af0bdb9cd170e3e694fedfde10ade81506eb066cd574240d         905  code/engr900378-fw/apps/plate/src/CMakeLists.txt
+7cf45fd2d27335c74fe15dbd5a17644cf1f7344bdd6677c6c49deba321ccde8e       36623  code/engr900378-fw/apps/plate/src/demo.c
+d7e7d1e28fe787a918f2e0e37adfaa3af36ca33f965c0da6f65e600a08a7d90b        7691  code/engr900378-fw/apps/plate/src/main.c
+e9dcb2692bad3598c2fe684b3a4fd358b27ddd1e62b0650c4c13e7b2220490db       18643  code/engr900378-fw/apps/plate/src/sheet_check.c
+65bcc524ed7a2320b7d5bca7955cd5869139d9bb1d206bbef8c13db75320344f        7846  code/engr900378-fw/apps/tools/devkit_run.py
+27da18e42deeee26bd1c4d43b1f9aac8db59535c7596e915d580ea7751500e74         182  code/engr900378-fw/components/comms/CMakeLists.txt
+271358ddc47c3d7c19d177fd56d40814e48d2bb85ceda335bd97ec288e2c65c5          19  code/engr900378-fw/components/comms/comms.c
+42d75fd1576743a2f59875ea8b41a93d7b5c5b671c910a5804c1a562d7cddf0e        2911  code/engr900378-fw/components/comms/comms_packet.c
+b2a1a18037c440a68ca0ca6081169097c541520f19e04a3d30a268cf3737c1aa        5510  code/engr900378-fw/components/comms/comms_radio.c
+0e06731c66592aab4bac9e1a5dfcd7ec530ae6c141a6d76e034c497b550aeb55        3021  code/engr900378-fw/components/comms/comms_send.c
+b3adf106d95b8934f690943f2921308b90be5b766c4c8ba250c792de56400201          13  code/engr900378-fw/components/comms/include/comms.h
+fdf14df03bff068d18801baa55fe2772137a3424892858bee03b0fbdcba80706         663  code/engr900378-fw/components/comms/include/comms_config.h
+f839206f6fbc35ebc97f0de27bd545bb9428fde28691183d50461d3489b7b70f        1397  code/engr900378-fw/components/comms/include/comms_keys.example.h
+2b6bf7c54ee32f39b944200aa668782133267d7dabd169674c2bda2d615f5a1d        5691  code/engr900378-fw/components/comms/include/comms_packet.h
+6620a9eab5b5e8593d2b69bd77e8953a5868c59bc337f083d26a419e48e8f5d5        1770  code/engr900378-fw/components/comms/include/comms_radio.h
+e31b8f644faa5f852b15396d42d30ea60e793864e3b313bc29ccf5444a264155        1432  code/engr900378-fw/components/comms/include/comms_send.h
+b12eed49faa2bf3de38e2293f7ec8be5764e3ff1d35b2ccd0d3b5a5d0c6ebbf5        3645  code/engr900378-fw/components/comms/test_host/test_comms_packet.c
+289b5d6c389578abe00cb52b3b42d52ac8f07437e548fddd4812c70fe343a590        3823  code/engr900378-fw/components/comms/test_host/test_comms_packet_v2.c
+39eef442608756400f40b372e2c318275869b639dd785b593cbf2b021c5d7691          77  code/engr900378-fw/components/drift_comp/CMakeLists.txt
+46a4b7482ca885782d7b039d6bede50c82c55681241ab73f8a4433c8a194ec85          24  code/engr900378-fw/components/drift_comp/drift_comp.c
+b3adf106d95b8934f690943f2921308b90be5b766c4c8ba250c792de56400201          13  code/engr900378-fw/components/drift_comp/include/drift_comp.h
+b0c06f047651dddf1bfdc7aead556df6676a5e90dd780868bedc9eb3977a3648          94  code/engr900378-fw/components/fdc1004/CMakeLists.txt
+b97bebf795144eacd679e6e31f1a02641c624f515965499a65e4b10e4c70bb63        4054  code/engr900378-fw/components/fdc1004/fdc1004.c
+f453a4eca2fbf225b5cc4a358e4062be6bd7cfd7fe97e7a05dacf1f1a264dce9         327  code/engr900378-fw/components/fdc1004/include/fdc1004.h
+6df1b8da3033926e88100f7214e1af624738e58aa3a79ddabae94df9d3a19ee3         105  code/engr900378-fw/components/fdc_comp/CMakeLists.txt
+509de8fcad428f43689598c6a6e5aeb9b72be66059676892b10ae4d02c8cc6b3       11881  code/engr900378-fw/components/fdc_comp/fdc_comp.c
+0ee2c6f97df197b16c7fcb0a26abac5026b7435196da5ca82c532cc9ce835763        6688  code/engr900378-fw/components/fdc_comp/include/fdc_comp.h
+bd5ac44bb3e153fa795a6a5dc7b2f5ee91a1246969c540c3f72c585a3c1626d5         485  code/engr900378-fw/components/fdc_comp/test_host/stubs/driver/i2c.h
+ef73e39ce3ae013ab4da9ddbb3891ba2da8f24ff74817392b59ab0a455784269         299  code/engr900378-fw/components/fdc_comp/test_host/stubs/esp_err.h
+c9017e8d4a072d885e995b9a6fb8d341ca0bb8ec863cef1c37379fe0be75564d         237  code/engr900378-fw/components/fdc_comp/test_host/stubs/esp_log.h
+aa4712e52328aeb67ac8e3fc4d60a6f5721ca1832cb634e4c2568787be0ce621         239  code/engr900378-fw/components/fdc_comp/test_host/stubs/esp_timer.h
+787a38dc66859aade9ed7dd34fbaddb6e3f3fd229168b1daf44ea6e2627d4d0f          92  code/engr900378-fw/components/fdc_comp/test_host/stubs/freertos/FreeRTOS.h
+0d32e40e8d54cce503480c4f3b42f3993e18b18e9b51d961481a6042d98615dd         130  code/engr900378-fw/components/fdc_comp/test_host/stubs/freertos/task.h
+a794e2bec69b70f74bcfeec29252c410211998d99cd4f13ccaeb9a06da33c8b5       11573  code/engr900378-fw/components/fdc_comp/test_host/test_fdc_comp_batch.c
+c027fceec91269d133a56e08b4de90b0348ae0ce753d18bc510532822d8b4f49          79  code/engr900378-fw/components/localization/CMakeLists.txt
+b3adf106d95b8934f690943f2921308b90be5b766c4c8ba250c792de56400201          13  code/engr900378-fw/components/localization/include/localization.h
+62144f9dd08285254275e77694b6842fe1f0647a560d0f054ac35fadedebf1ca          26  code/engr900378-fw/components/localization/localization.c
+d57270a531036856cdc16051f60ef4842c9b0fdb2b04ae53a65c2fbc0c8169ec         106  code/engr900378-fw/components/mux/CMakeLists.txt
+4162ee6c42af1b72ed6afcef783bfdab6ebd9327d350cb68d2681e3298ad6868         124  code/engr900378-fw/components/mux/include/mux.h
+782300c46a6cd213d2aeb603d6ee84e34b25347d67d25234cc022fe137ffd33f        1024  code/engr900378-fw/components/mux/mux.c
+9d7d622b2155d428f7a6c04dfb60046dcacb4fcb23aa3e52218d0e73cd3bf9ca          72  code/engr900378-fw/components/power/CMakeLists.txt
+b3adf106d95b8934f690943f2921308b90be5b766c4c8ba250c792de56400201          13  code/engr900378-fw/components/power/include/power.h
+f7a9858ec87e5a6432b726f5be7aca757b9abcdd3a99272cef3d6f522e6ac9aa          19  code/engr900378-fw/components/power/power.c
+acf9de54279d06e609df892b2efc865172690d102ddc3b24359d2642c24853d5          74  code/engr900378-fw/components/rtc_i2c/CMakeLists.txt
+b3adf106d95b8934f690943f2921308b90be5b766c4c8ba250c792de56400201          13  code/engr900378-fw/components/rtc_i2c/include/rtc_i2c.h
+de6e86174b0a7d048cf91d1aec940a61a9e21d29433c0de57307fecaddb213fa          21  code/engr900378-fw/components/rtc_i2c/rtc_i2c.c
+2b1ed77afd4f27835a1b20fa2654a98917e5fedb8b2b2cae42c943cd36a4bca0         241  code/engr900378-fw/components/sensor_source/CMakeLists.txt
+23113a76df56a9bc69f99ecf9143d8fed2394af84e659dd1a603267cfe46774f        1317  code/engr900378-fw/components/sensor_source/include/sensor_source.h
+afe2aabced921a9219fdeabd402ac045a77c84c180759b244634a7285624e55d         187  code/engr900378-fw/components/sensor_source/sensor_source.c
+c6a95ab6001eb128ee05bc0d7d12e7aecbe9a8e9700fa9233193b328dfa633ea        6987  code/engr900378-fw/components/sensor_source/sensor_source_cdc.c
+01fb4f680196d451d45de4542ced8d673462ca452cea992a4262da58160743a6        2031  code/engr900378-fw/components/sensor_source/sensor_source_fake.c
+76b1d9136546d663b76cf855629f6a91dae6f4ab62b5677d664d7b0f0f6548aa         252  code/engr900378-fw/components/sensor_source/sensor_source_select.h
+46233cd5280a0a9b64284a8e9f557fefe903fc6aa8db78dfcdb64944935a29d2         111  code/engr900378-fw/components/tca9548a/CMakeLists.txt
+64ec364dcb026bcf9c6e9e0e13024aa4ae89ba7f478ae92a4503f69441189eef         572  code/engr900378-fw/components/tca9548a/include/tca9548a.h
+505c64a3ca42b65b8e836257969d60a4855b4a93e7da4ee95447f7eed9e3f8b0        1504  code/engr900378-fw/components/tca9548a/tca9548a.c
+44326d152ec072242b2f53147699acfcabdc6b3dfd02363ea8d89673a60087e6          70  code/engr900378-fw/components/ulp/CMakeLists.txt
+b3adf106d95b8934f690943f2921308b90be5b766c4c8ba250c792de56400201          13  code/engr900378-fw/components/ulp/include/ulp.h
+4048cc2181b62fc9aebe3829df90db1dd5532e5b34f2b729ae94c02293137f6e          17  code/engr900378-fw/components/ulp/ulp.c
+c3258211821da6ed74af830a958c119a9f3a700a09bf4ba258cddda921c6bf4a          72  code/engr900378-fw/components/utils/CMakeLists.txt
+b3adf106d95b8934f690943f2921308b90be5b766c4c8ba250c792de56400201          13  code/engr900378-fw/components/utils/include/utils.h
+af47b9301af8f07e89017b913569576a4f67b2669647e2abc03eed3088cb2d4c          19  code/engr900378-fw/components/utils/utils.c
+ebc61165153caa374f0c1593c45e5790d619005d1af825eacfa8c6d24669939e        3376  code/engr900378-fw/docs/DEMO-PLATE.md
+c87e140e208641523b84868d2e677176959f36830c6522cdd93cc3221d0d90c0        6762  code/engr900378-fw/docs/bench/PB4-demo-bench-plan.md
+287aaf80febfbee27dbee3bb8d719d5a0d134ad4b59bef87b874cade871c4e7b      118547  code/engr900378-fw/docs/env-selector-apps-plate.png
+85b51e541c5c1786b5b0f74f2ea4d3227f12e3ed1c35876c46d9b0f55e692c55        4813  code/engr900378-fw/docs/flashing.md
+534a4739f5acc8c8c01a8f1a716d7e5d6852e0366f2962158002f51957a35c35     3369799  code/engr900378-fw/docs/p1-wiring.png
+03a0cf6091787ec598f99e84988369d3b765ad558d7b08bfa850465061b62e20        4237  code/engr900378-fw/docs/pr/feat-plate-comms.md
+347170baf5c3013f398bc0f83fa43903acaab07248acd231663644535d229f88        1264  code/engr900378-fw/include/README
+4d9f17a0e01d573da15e9cae72ce1e14e313908a43c2790a20f924a9f1d534db        1467  code/engr900378-fw/include/board_pins.h
+bb872e3005f9eb9c4bdaa38bd69dc935a4455e6c6982efb2d45161deb44f99f9        1054  code/engr900378-fw/lib/README
+17b9a32a6a156c280678dfde26caa90437916e06b1c6c790afea89646f4307d1       82252  code/engr900378-fw/logs/PB4-20261017-01-sheet-check-JP4.log
+0c3c706f188af86fd0912c9d3679215ecd75351eee9c56207a9605d23db0b427       70903  code/engr900378-fw/logs/PB4-20261017-02-sheet-check-JP4-sheet3.log
+3d17d77ab5496750d69b1257900e4887dcdab11c3762e69a4ee8c9afd0dd9cb2       14646  code/engr900378-fw/logs/PB4-20261017-03-plate-boot.log
+832df317e00dffdf59ec15b51127ea24a998ce2973ef08d432d9bd3772353abe        6171  code/engr900378-fw/logs/PB4-20261017-04-gateway-boot.log
+c43b6f88faa656b8ddd95383b2e31213f5149dd5db8ff07eb476c42b0be4e56c       55160  code/engr900378-fw/logs/PB4-20261017-05-pi-journal.log
+66cb5b388b4edb81cdd8726c3af6a33c68dc471df30388b89d70bf1b500995bc       48291  code/engr900378-fw/logs/PB4-20261017-07-sleep-bench.log
+a5f1e48a446cc41fd685fa6fcd7064a03334d46242daead0ea08aa9e45f2bd20       11426  code/engr900378-fw/logs/PB4-20261017-08-pi-journal-battery-sleep.log
+82dad42b9fadd91e0ebc29edfb2ac44127c4baec1f041fa525d6eef10cd9f472         450  code/engr900378-fw/logs/PB4-20261019-01-cell-voltage.log
+5e485a8081ae5ad608005339d4dbb6c86fc1a8b32804d861f89aa62f118c4518        6345  code/engr900378-fw/logs/PB4-20261019-02-gateway-boot.log
+96a7b52674a0f2ec7791cfb6cbf59cda1af29b758a156e3d2b0625bdff788d15       23593  code/engr900378-fw/logs/PB4-20261019-03-plate-demo-safe-serial.log
+ceac8af87ac1606a24132e40a4ccf820da5fbb9c410e0f9da7990d70f8e0cc15       39009  code/engr900378-fw/logs/PB4-20261020-01-plate-demo-match-serial.log
+48e58a4e67238c4870d6a2bf121716355b2ea1246e28b769006c35f4e8ef37a9        9295  code/engr900378-fw/logs/PB4-20261020-02-plate-demo-match-pi-journal.log
+4b80d9c6c2b9bac50f0f759f848e8fc19fe82c9be99fa085c50ddbb238813d88      707582  code/engr900378-fw/logs/PB4-20261020-03-plate-demo-match-sheet-swap-serial.log
+8b9699356203d54e8b2868faf7ad5c62e3b4c7d9933d41fb8e29de53d68cccee        7046  code/engr900378-fw/logs/PB4-20261020-04-plate-demo-match-sheet-swap-pi-journal.log
+8591a06b8fde3d1b7adf9813848bdafd52ed8d01c8ed254bdc48580af09b9a27       43964  code/engr900378-fw/logs/PB4-20261020-05-plate-demo-match-run3-sheet3-serial.log
+5e3fee4fa81cfc4f6d1dc487746b2e4084ba6afcd5de3fbbe9a6862c542abe06       12693  code/engr900378-fw/logs/PB4-20261020-06-plate-demo-match-run3-sheet3-pi-journal.log
+10f9d5243484b0904582ba2cb281b978ce6157c96a0acb67b08fde6ead4b940e      158160  code/engr900378-fw/logs/PB4-20261020-07-plate-demo-match-run2-sheet-JP4-serial.log
+5f64cfc61b49778e45031f2ac54574549e0dbe6b1b452810213371dc6d231997       48252  code/engr900378-fw/logs/PB4-20261020-08-plate-demo-match-run2-sheet-JP4-pi-journal.log
+2da4dfffd4bfc58f267ae85753ee5485f06933e81aac43f8609f95a94b753d90       29461  code/engr900378-fw/logs/PB4-20261020-09-sheet-check-run2-sheet-JP4.log
+825032ffd70032f1532493e3a0bbd4beee4833afb1b61d5852b01de7614c23da      235938  code/engr900378-fw/logs/PB4-20261020-10-plate-demo-match-sheet5-JP4-serial.log
+da4e8e7e78d407ba5b8f3b43fb8a888a27fe6a50025fe5d91794ad51463b6ef6       49484  code/engr900378-fw/logs/PB4-20261020-11-plate-demo-match-sheet5-JP4-pi-journal.log
+2414ca9f1384e4a299dbf0198370c6ad1f85ccd5f5bca4b92df0468697f280f4        9918  code/engr900378-fw/logs/PB4-20261020-12-plate-demo-match-sheet5-JP4-vps-ingest.log
+2bdf8b92e08e95a937a548cb725338ab7114548fc8872b09dfbc46da153627ee      101718  code/engr900378-fw/logs/PB4-20261020-13-plate-demo-match-sheet5-JP4-battery-serial.log
+a5b1251173a512930e4ac0855b254389b61f5f76f0d5812d86ba460ed5914fd3       25095  code/engr900378-fw/logs/PB4-20261020-14-plate-demo-match-sheet5-JP4-battery-pi-journal.log
+e644d9ffa800b6cf7f18aa2490a99bdb90deea7402917f3f13275d4f17d3bc2a       98908  code/engr900378-fw/logs/PB4-20261020-15-plate-demo-match-sheet5-JP4-cold-boot-serial.log
+18e5bb315429d076f73beb749b6f0494f87e7fc8bd4490b7428518a0859ba628       29099  code/engr900378-fw/logs/PB4-20261020-16-plate-demo-match-sheet5-JP4-cold-boot-pi-journal.log
+661ef779aa8ba90a0d406e5425bb10b6230609aa1b38b3eb9e6830d7a7e0aa56       38302  code/engr900378-fw/logs/PB4-20261020-17-two-plate-pi-journal.log
+473828113ec3d9c912292239125291dd961f1870dd0a1f129854c343a699ab44       67597  code/engr900378-fw/logs/PB4-20261020-18-two-plate-spare-serial.log
+e27167cb476c3fe75fc745a56700b2fe5b68c36c2d67bfc7f60953f10bb1f95d       23165  code/engr900378-fw/logs/cdc2-tca-bringup-20261012.log
+7149c6f40ec3e66576bd93d7a4dab179cb495fdec0fadbf473d1f639d9dc1e10        5172  code/engr900378-fw/logs/gateway-unit1-e2e-20261015-boot.log
+a49ae07d58a283e5c53a0365a17e3cfa16347ba475e61e1dff1364e151314c83       60866  code/engr900378-fw/logs/plate-comms-devkit-20261014-gw.log
+2a64ff7ddd789ba60858cf1c2b39871e123efce7828acbeb6f0330253e07b561       29707  code/engr900378-fw/logs/plate-comms-devkit-20261014-plate.log
+3f93e7efb847b57467df4fdf0338449805da937782aa37ef242255f974a5124b       25025  code/engr900378-fw/logs/plate-comms-devkit-e2e-precheck-20261014-gw.log
+d90d527d8ced8d12c7b24fdc2eb7bd504a0212324f52b60a780fd004046a66db       14421  code/engr900378-fw/logs/plate-comms-devkit-e2e-precheck-20261014-plate.log
+1e9a41ac27142622ff3644520f78fd7737669aae64473ea0accbdc4126f100aa      638692  code/engr900378-fw/logs/power-board-bringup-20261013-01-brownout-limit.log
+6eee6a7a4f324421b41f875168ed4a2cf96a3408792dac9d16fc6ffca7444c6f        6159  code/engr900378-fw/logs/power-board-bringup-20261013-02-stale-pinmap.log
+4241de93e26b63ec083f5e068c0eed24cfd0311f2ef256c23d1d499dcb59327f       13077  code/engr900378-fw/logs/power-board-bringup-20261013-03-stale-pinmap.log
+1e251ba021f1ef85a59a1d748ace4416a876ccc9757f2dd3fb33e4a3e102967f        5673  code/engr900378-fw/logs/power-board-bringup-20261013-04-pass.log
+0fe0f5a08518effc4ae60fc3505e9d5b2ca6ad9c0a732c6913ec75e2503fc31f        7674  code/engr900378-fw/logs/power-board-bringup-20261013-05-heartbeat-10min.log
+ba3ef0cd8bfa9437850171571bc4f28b92aa34770310e1dc4b445d73e40004f8      427829  code/engr900378-fw/logs/power-board-stage3-20261014-01-brownout-loop.log
+5ba085f9ff2c9909abff2af0bee0662f544633117105b2cdce4587c23ff5b63f       50417  code/engr900378-fw/logs/power-board-stage3-20261014-02-first-run.log
+b29fa48d9ddbd682eafcd938852602c938e390033f4e4e74ca46e2cb918d75a7       84626  code/engr900378-fw/logs/power-board-stage3-20261014-03-touch-isolation.log
+539e0fd6cb2cc93cd86f05507f918960923e46af7ac2bf29d245aa6de6617eaf      481870  code/engr900378-fw/logs/power-board-stage3-20261014-04-soak.log
+f0205d6f6ba83edb4c6cfa58574f6f40c119851639439fe1ddda0ae8a7872502       85201  code/engr900378-fw/logs/sheet-check-isaac-sheet-20261015.log
+1d2db5fa5234d87fecefee02b911156169d39a11463c60e3f908307ecfd4439d        1475  code/engr900378-fw/platformio.ini
+5326fdb0db0a57a60ea09dfe132a1607075157c8f9452ba72cea7575ca6167f0       86594  code/engr900378-fw/sdkconfig.esp32-s3-devkitc-1
+9d0fe92a50ebfc62560251ee5cfa5b8fbdb7a95e5747dd1808bb600051512141       78193  code/engr900378-fw/sdkconfig.esp32dev
+d1592372ce294abb53e77062b13224f026bb244cba398832bf28e3ea7ed99f24       86262  code/engr900378-fw/sdkconfig.s3_devkit
+feaf2a6ee8d1a10ae782077edfbdc193b6738dbe996e1ac45c0e7ab658fc3926         423  code/engr900378-fw/sdkconfig.s3_devkit.defaults
+59ed1442d0262d2ac308d02680f91cdc5900ed9038337c2796d2d9d2553768dd       86263  code/engr900378-fw/sdkconfig.s3_power_board
+9e079c8e05138133910e5d0cd702685c42a5a025257bf0eb930fdf7d0072e628         391  code/engr900378-fw/sdkconfig.s3_power_board.defaults
+f10b42cd76c1c5183bb1d093d72f5ab6695154f1d8516ccc73d2ac1f2b74b083         199  code/engr900378-fw/src/CMakeLists.txt
+4173a84dec825c484d4f47772b250d00bdf9ed3ade05b85452c14e07fa5292f2       30030  code/engr900378-fw/src/main.c
+aba0a4b9df0b0d2e17eb6b17c327aa764f9d2d4f6fb7620a6e2436689a333962         518  code/engr900378-fw/test/README
+02c84b4993c6d08eee5b574b69e1c7344dd6d5b19c1a6adf52c8bb30f1fa1b16         205  code/engr900378-fw/test_apps/espnow_link/gateway/CMakeLists.txt
+a845260dce30fd69a9cbaf058a8d78d41e3c6621d08fe7a12c2c9c146b1c3fb1      273634  code/engr900378-fw/test_apps/espnow_link/gateway/logs/espnow-link-20261013-L2-gw.log
+248fab3a4855e23e8e48692f99a585ef68a8a61738bf7786e3cae6df20c763d7       10966  code/engr900378-fw/test_apps/espnow_link/gateway/logs/espnow-link-20261013-L3-gw.log
+d4ff9e7c2385525a1cfd5e05d34dc0b9767c0d022cdfe61a2aff9c62b3c400ba      320656  code/engr900378-fw/test_apps/espnow_link/gateway/logs/espnow-link-20261013-L4-gw.log
+5430977b913213d8d7a809c671b5b89f13a2895df8243d9a2a4d225e90d2cd63      294168  code/engr900378-fw/test_apps/espnow_link/gateway/logs/espnow-link-20261014-L4c-run1-stale-plate-gw.log
+fc0b3bc0507be14d79d84c3c1f6ab4839423c05f31a31f4964c36ab7f54057b4      295723  code/engr900378-fw/test_apps/espnow_link/gateway/logs/espnow-link-20261014-L4c-run2-baseline-gw.log
+356887efeb1078ef1475bb88aff5b4cc6e58afcb585512c63846ad458194886e      296368  code/engr900378-fw/test_apps/espnow_link/gateway/logs/espnow-link-20261014-L4c-run3-peer-while-parked-gw.log
+8088a087af3ab2bb13d143b5a3044539f6ed23a321b36c96b46ea5cc81d7e609      296004  code/engr900378-fw/test_apps/espnow_link/gateway/logs/espnow-link-20261014-L4c-run4-confirm-gw.log
+d2fa4166c7a4f0efa6a89fd8c3325997b5e71df4200b6285c76d4d999e763354      266074  code/engr900378-fw/test_apps/espnow_link/gateway/logs/espnow-link-20261014-L5.log
+d18446dd1e644b64ef3fac32b8c76967a4430fb3f5107b90970a077125e31d45         202  code/engr900378-fw/test_apps/espnow_link/gateway/platformio.ini
+dc1a7d1f2c549222fdd98c4e808c3d250c1f443020725f1b4ab14bdc9b8921cc         165  code/engr900378-fw/test_apps/espnow_link/gateway/sdkconfig.defaults
+56c553c63e59a57c6e6d915e85ef0cbed911159293191b462098ad5fef9ce8ff       78138  code/engr900378-fw/test_apps/espnow_link/gateway/sdkconfig.gateway
+017acfafb69bacdcf3fa4e9a4f9f52d83a70d7296d9368d4e975431257aaf1ba          82  code/engr900378-fw/test_apps/espnow_link/gateway/src/CMakeLists.txt
+51c089a7ea9ee82e37700c9301c1470bddd5ae0a8389b0eb06f79c4f4606a34b        7575  code/engr900378-fw/test_apps/espnow_link/gateway/src/main.c
+5353d9efefc8796203dc6f142b77fd090801a483329b5017d522ab23508e7420         203  code/engr900378-fw/test_apps/espnow_link/plate/CMakeLists.txt
+2ba880f0e61f6c5f7c954497446a74bd325f8d66ab0b2b398c578fd1454ed08c       74376  code/engr900378-fw/test_apps/espnow_link/plate/logs/espnow-link-20261013-L2-plate.log
+9d772af1a94da5427285984f0c82cfa0d5817dc20316b11b1e4725733dd706a2       70318  code/engr900378-fw/test_apps/espnow_link/plate/logs/espnow-link-20261013-L3-plate.log
+0aca2dcb68b531f5f0d87c5d95a283b249ed9ccf92242d114a4930d95c7b1075       75870  code/engr900378-fw/test_apps/espnow_link/plate/logs/espnow-link-20261013-L4-plate.log
+799517b0a981fa376a1b8e1c5b486612a081771d7f366d73b8a41cfcd0de2403       77297  code/engr900378-fw/test_apps/espnow_link/plate/logs/espnow-link-20261014-L4c-run1-stale-plate-plate.log
+be2eb235b9766e0441181266a01ede2f094744e306666575d40c24c0b1b0e658       76543  code/engr900378-fw/test_apps/espnow_link/plate/logs/espnow-link-20261014-L4c-run2-baseline-plate.log
+ab6e5215bf9c11c11f550216c5bae16038c26dafed68950a3eddd5a1a706f4c7       76544  code/engr900378-fw/test_apps/espnow_link/plate/logs/espnow-link-20261014-L4c-run3-peer-while-parked-plate.log
+04b37df7ebfc3a9f4854eafc54f9b6d15b8ce8255f287cc4febd25a115876303       76542  code/engr900378-fw/test_apps/espnow_link/plate/logs/espnow-link-20261014-L4c-run4-confirm-plate.log
+5241fde025b23640de4c7d2138dd4fdf44ba91924a2fcf21ddcec57eb60a661a         331  code/engr900378-fw/test_apps/espnow_link/plate/platformio.ini
+eefb742078b5b8f80d4c2cb0729210b11c537cc0dcb59d86ac6aba80fc4db0f6         218  code/engr900378-fw/test_apps/espnow_link/plate/sdkconfig.defaults
+ec36a9ffc46d315eb74cf903150710a5346dbde685ec2277985a962129834b3b       86439  code/engr900378-fw/test_apps/espnow_link/plate/sdkconfig.plate
+017acfafb69bacdcf3fa4e9a4f9f52d83a70d7296d9368d4e975431257aaf1ba          82  code/engr900378-fw/test_apps/espnow_link/plate/src/CMakeLists.txt
+132200e497c44153e415fc47c0e7003ec6161992824aa27137687a8887279525        6056  code/engr900378-fw/test_apps/espnow_link/plate/src/main.c
+cdbe2625df3d0b6210ef96c86736eee8589f4b8fab16921d9875ab164f895d92       12331  code/engr900378-fw/test_apps/espnow_link/tools/l4_run.py
+660f840f6bea171b907123a24843577b0c87337d63a7b20c5346738a981fbb5b         942  data/demo-20261021/plate01_events_influx.csv
+652c704ca1f03f67e5d1bc731c1cbb843b8c28be83750df5cb904549ee2dad60      138655  data/demo-20261021/plate01_frames.csv
+134e63d6a1f37e3a40427addc5c6cc35b819272981b914c95d47f92b38684826         212  data/demo-20261021/plate01_reboots_journal.csv
+88e49a2cbb62285ceeb3f5eda67899ae8bae673772c480f9b8ef2aca796fdbb7      278436  data/demo-20261021/plate02_busiest15min_corrected.png
+fb98dfe264533ba18d8f0a4b577bab11748ea1cd7ef69e475d706a8e77440da6        2459  data/demo-20261021/plate02_cdc_events.csv
+122e3d279dc61245733a960b1045e7834fcdfd9f4f68402a32406b92df1a9dc7        4857  data/demo-20261021/plate02_events_influx.csv
+31bb2ff024f91f6998a57bf95d0ef8c0fa50ecbe6601456c02b8dbf0b13bb521      227466  data/demo-20261021/plate02_frames.csv
+aef8fedf1c12f14ab0049daa1ebc055ae018857300422b16ed68f5261d01f89c     1525387  data/demo-20261021/plate02_nodes.csv
+3758f9ef4c9c6ed084d9566ef3e94f49691e2af15fdcadb249837c38e5fc4745        1418  data/demo-20261021/plate02_reboots_journal.csv
+31e765dcbe14fbb7d0c4adfc8623b3e076252cadbd92dc2d2521c085be1ff862        3436  data/demo-20261021/plate02_state_episodes.csv
+e33c4c5210145428c83d04698a14e0430b2411cb2c11e1960f9ccad2639a55c4        1208  data/demo-20261021/plate02_untouched_windows.csv
+a478bed78d90fa784d612ac136c055d42e9cb2b9e53cf0ff95e4fd4acfbd6eaa      374865  geometry/Capstone_Test_PCB_results.xlsx
+1e251ba021f1ef85a59a1d748ace4416a876ccc9757f2dd3fb33e4a3e102967f        5673  logs/bringup/power-board-bringup-20261013-04-pass.log
+0c5383a711f2d6f41381c5788d3d9ac699908076f0a015cda75cfeffbad6114c       39003  logs/complete/chris_tests_1.zip
+8494a5c38f78e248ce574fcfb6c387fd2d2e377b3ffc87ffb1b44b3a5f237724       23946  logs/complete/chris_tests_2.zip
+a845260dce30fd69a9cbaf058a8d78d41e3c6621d08fe7a12c2c9c146b1c3fb1      273634  logs/complete/espnow-link-gateway-logs/espnow-link-20261013-L2-gw.log
+248fab3a4855e23e8e48692f99a585ef68a8a61738bf7786e3cae6df20c763d7       10966  logs/complete/espnow-link-gateway-logs/espnow-link-20261013-L3-gw.log
+d4ff9e7c2385525a1cfd5e05d34dc0b9767c0d022cdfe61a2aff9c62b3c400ba      320656  logs/complete/espnow-link-gateway-logs/espnow-link-20261013-L4-gw.log
+5430977b913213d8d7a809c671b5b89f13a2895df8243d9a2a4d225e90d2cd63      294168  logs/complete/espnow-link-gateway-logs/espnow-link-20261014-L4c-run1-stale-plate-gw.log
+fc0b3bc0507be14d79d84c3c1f6ab4839423c05f31a31f4964c36ab7f54057b4      295723  logs/complete/espnow-link-gateway-logs/espnow-link-20261014-L4c-run2-baseline-gw.log
+356887efeb1078ef1475bb88aff5b4cc6e58afcb585512c63846ad458194886e      296368  logs/complete/espnow-link-gateway-logs/espnow-link-20261014-L4c-run3-peer-while-parked-gw.log
+8088a087af3ab2bb13d143b5a3044539f6ed23a321b36c96b46ea5cc81d7e609      296004  logs/complete/espnow-link-gateway-logs/espnow-link-20261014-L4c-run4-confirm-gw.log
+d2fa4166c7a4f0efa6a89fd8c3325997b5e71df4200b6285c76d4d999e763354      266074  logs/complete/espnow-link-gateway-logs/espnow-link-20261014-L5.log
+2ba880f0e61f6c5f7c954497446a74bd325f8d66ab0b2b398c578fd1454ed08c       74376  logs/complete/espnow-link-plate-logs/espnow-link-20261013-L2-plate.log
+9d772af1a94da5427285984f0c82cfa0d5817dc20316b11b1e4725733dd706a2       70318  logs/complete/espnow-link-plate-logs/espnow-link-20261013-L3-plate.log
+0aca2dcb68b531f5f0d87c5d95a283b249ed9ccf92242d114a4930d95c7b1075       75870  logs/complete/espnow-link-plate-logs/espnow-link-20261013-L4-plate.log
+799517b0a981fa376a1b8e1c5b486612a081771d7f366d73b8a41cfcd0de2403       77297  logs/complete/espnow-link-plate-logs/espnow-link-20261014-L4c-run1-stale-plate-plate.log
+be2eb235b9766e0441181266a01ede2f094744e306666575d40c24c0b1b0e658       76543  logs/complete/espnow-link-plate-logs/espnow-link-20261014-L4c-run2-baseline-plate.log
+ab6e5215bf9c11c11f550216c5bae16038c26dafed68950a3eddd5a1a706f4c7       76544  logs/complete/espnow-link-plate-logs/espnow-link-20261014-L4c-run3-peer-while-parked-plate.log
+04b37df7ebfc3a9f4854eafc54f9b6d15b8ce8255f287cc4febd25a115876303       76542  logs/complete/espnow-link-plate-logs/espnow-link-20261014-L4c-run4-confirm-plate.log
+17b9a32a6a156c280678dfde26caa90437916e06b1c6c790afea89646f4307d1       82252  logs/complete/fw-logs/PB4-20261017-01-sheet-check-JP4.log
+0c3c706f188af86fd0912c9d3679215ecd75351eee9c56207a9605d23db0b427       70903  logs/complete/fw-logs/PB4-20261017-02-sheet-check-JP4-sheet3.log
+3d17d77ab5496750d69b1257900e4887dcdab11c3762e69a4ee8c9afd0dd9cb2       14646  logs/complete/fw-logs/PB4-20261017-03-plate-boot.log
+832df317e00dffdf59ec15b51127ea24a998ce2973ef08d432d9bd3772353abe        6171  logs/complete/fw-logs/PB4-20261017-04-gateway-boot.log
+c43b6f88faa656b8ddd95383b2e31213f5149dd5db8ff07eb476c42b0be4e56c       55160  logs/complete/fw-logs/PB4-20261017-05-pi-journal.log
+66cb5b388b4edb81cdd8726c3af6a33c68dc471df30388b89d70bf1b500995bc       48291  logs/complete/fw-logs/PB4-20261017-07-sleep-bench.log
+a5f1e48a446cc41fd685fa6fcd7064a03334d46242daead0ea08aa9e45f2bd20       11426  logs/complete/fw-logs/PB4-20261017-08-pi-journal-battery-sleep.log
+82dad42b9fadd91e0ebc29edfb2ac44127c4baec1f041fa525d6eef10cd9f472         450  logs/complete/fw-logs/PB4-20261019-01-cell-voltage.log
+5e485a8081ae5ad608005339d4dbb6c86fc1a8b32804d861f89aa62f118c4518        6345  logs/complete/fw-logs/PB4-20261019-02-gateway-boot.log
+96a7b52674a0f2ec7791cfb6cbf59cda1af29b758a156e3d2b0625bdff788d15       23593  logs/complete/fw-logs/PB4-20261019-03-plate-demo-safe-serial.log
+ceac8af87ac1606a24132e40a4ccf820da5fbb9c410e0f9da7990d70f8e0cc15       39009  logs/complete/fw-logs/PB4-20261020-01-plate-demo-match-serial.log
+48e58a4e67238c4870d6a2bf121716355b2ea1246e28b769006c35f4e8ef37a9        9295  logs/complete/fw-logs/PB4-20261020-02-plate-demo-match-pi-journal.log
+4b80d9c6c2b9bac50f0f759f848e8fc19fe82c9be99fa085c50ddbb238813d88      707582  logs/complete/fw-logs/PB4-20261020-03-plate-demo-match-sheet-swap-serial.log
+8b9699356203d54e8b2868faf7ad5c62e3b4c7d9933d41fb8e29de53d68cccee        7046  logs/complete/fw-logs/PB4-20261020-04-plate-demo-match-sheet-swap-pi-journal.log
+8591a06b8fde3d1b7adf9813848bdafd52ed8d01c8ed254bdc48580af09b9a27       43964  logs/complete/fw-logs/PB4-20261020-05-plate-demo-match-run3-sheet3-serial.log
+5e3fee4fa81cfc4f6d1dc487746b2e4084ba6afcd5de3fbbe9a6862c542abe06       12693  logs/complete/fw-logs/PB4-20261020-06-plate-demo-match-run3-sheet3-pi-journal.log
+10f9d5243484b0904582ba2cb281b978ce6157c96a0acb67b08fde6ead4b940e      158160  logs/complete/fw-logs/PB4-20261020-07-plate-demo-match-run2-sheet-JP4-serial.log
+5f64cfc61b49778e45031f2ac54574549e0dbe6b1b452810213371dc6d231997       48252  logs/complete/fw-logs/PB4-20261020-08-plate-demo-match-run2-sheet-JP4-pi-journal.log
+2da4dfffd4bfc58f267ae85753ee5485f06933e81aac43f8609f95a94b753d90       29461  logs/complete/fw-logs/PB4-20261020-09-sheet-check-run2-sheet-JP4.log
+825032ffd70032f1532493e3a0bbd4beee4833afb1b61d5852b01de7614c23da      235938  logs/complete/fw-logs/PB4-20261020-10-plate-demo-match-sheet5-JP4-serial.log
+da4e8e7e78d407ba5b8f3b43fb8a888a27fe6a50025fe5d91794ad51463b6ef6       49484  logs/complete/fw-logs/PB4-20261020-11-plate-demo-match-sheet5-JP4-pi-journal.log
+2414ca9f1384e4a299dbf0198370c6ad1f85ccd5f5bca4b92df0468697f280f4        9918  logs/complete/fw-logs/PB4-20261020-12-plate-demo-match-sheet5-JP4-vps-ingest.log
+2bdf8b92e08e95a937a548cb725338ab7114548fc8872b09dfbc46da153627ee      101718  logs/complete/fw-logs/PB4-20261020-13-plate-demo-match-sheet5-JP4-battery-serial.log
+a5b1251173a512930e4ac0855b254389b61f5f76f0d5812d86ba460ed5914fd3       25095  logs/complete/fw-logs/PB4-20261020-14-plate-demo-match-sheet5-JP4-battery-pi-journal.log
+e644d9ffa800b6cf7f18aa2490a99bdb90deea7402917f3f13275d4f17d3bc2a       98908  logs/complete/fw-logs/PB4-20261020-15-plate-demo-match-sheet5-JP4-cold-boot-serial.log
+18e5bb315429d076f73beb749b6f0494f87e7fc8bd4490b7428518a0859ba628       29099  logs/complete/fw-logs/PB4-20261020-16-plate-demo-match-sheet5-JP4-cold-boot-pi-journal.log
+661ef779aa8ba90a0d406e5425bb10b6230609aa1b38b3eb9e6830d7a7e0aa56       38302  logs/complete/fw-logs/PB4-20261020-17-two-plate-pi-journal.log
+473828113ec3d9c912292239125291dd961f1870dd0a1f129854c343a699ab44       67597  logs/complete/fw-logs/PB4-20261020-18-two-plate-spare-serial.log
+e27167cb476c3fe75fc745a56700b2fe5b68c36c2d67bfc7f60953f10bb1f95d       23165  logs/complete/fw-logs/cdc2-tca-bringup-20261012.log
+7149c6f40ec3e66576bd93d7a4dab179cb495fdec0fadbf473d1f639d9dc1e10        5172  logs/complete/fw-logs/gateway-unit1-e2e-20261015-boot.log
+a49ae07d58a283e5c53a0365a17e3cfa16347ba475e61e1dff1364e151314c83       60866  logs/complete/fw-logs/plate-comms-devkit-20261014-gw.log
+2a64ff7ddd789ba60858cf1c2b39871e123efce7828acbeb6f0330253e07b561       29707  logs/complete/fw-logs/plate-comms-devkit-20261014-plate.log
+3f93e7efb847b57467df4fdf0338449805da937782aa37ef242255f974a5124b       25025  logs/complete/fw-logs/plate-comms-devkit-e2e-precheck-20261014-gw.log
+d90d527d8ced8d12c7b24fdc2eb7bd504a0212324f52b60a780fd004046a66db       14421  logs/complete/fw-logs/plate-comms-devkit-e2e-precheck-20261014-plate.log
+1e9a41ac27142622ff3644520f78fd7737669aae64473ea0accbdc4126f100aa      638692  logs/complete/fw-logs/power-board-bringup-20261013-01-brownout-limit.log
+6eee6a7a4f324421b41f875168ed4a2cf96a3408792dac9d16fc6ffca7444c6f        6159  logs/complete/fw-logs/power-board-bringup-20261013-02-stale-pinmap.log
+4241de93e26b63ec083f5e068c0eed24cfd0311f2ef256c23d1d499dcb59327f       13077  logs/complete/fw-logs/power-board-bringup-20261013-03-stale-pinmap.log
+1e251ba021f1ef85a59a1d748ace4416a876ccc9757f2dd3fb33e4a3e102967f        5673  logs/complete/fw-logs/power-board-bringup-20261013-04-pass.log
+0fe0f5a08518effc4ae60fc3505e9d5b2ca6ad9c0a732c6913ec75e2503fc31f        7674  logs/complete/fw-logs/power-board-bringup-20261013-05-heartbeat-10min.log
+ba3ef0cd8bfa9437850171571bc4f28b92aa34770310e1dc4b445d73e40004f8      427829  logs/complete/fw-logs/power-board-stage3-20261014-01-brownout-loop.log
+5ba085f9ff2c9909abff2af0bee0662f544633117105b2cdce4587c23ff5b63f       50417  logs/complete/fw-logs/power-board-stage3-20261014-02-first-run.log
+b29fa48d9ddbd682eafcd938852602c938e390033f4e4e74ca46e2cb918d75a7       84626  logs/complete/fw-logs/power-board-stage3-20261014-03-touch-isolation.log
+539e0fd6cb2cc93cd86f05507f918960923e46af7ac2bf29d245aa6de6617eaf      481870  logs/complete/fw-logs/power-board-stage3-20261014-04-soak.log
+f0205d6f6ba83edb4c6cfa58574f6f40c119851639439fe1ddda0ae8a7872502       85201  logs/complete/fw-logs/sheet-check-isaac-sheet-20261015.log
+248fab3a4855e23e8e48692f99a585ef68a8a61738bf7786e3cae6df20c763d7       10966  logs/link/espnow-link-20261013-L3-gw.log
+9d772af1a94da5427285984f0c82cfa0d5817dc20316b11b1e4725733dd706a2       70318  logs/link/espnow-link-20261013-L3-plate.log
+66cb5b388b4edb81cdd8726c3af6a33c68dc471df30388b89d70bf1b500995bc       48291  logs/plate/PB4-20261017-07-sleep-bench.log
+825032ffd70032f1532493e3a0bbd4beee4833afb1b61d5852b01de7614c23da      235938  logs/plate/PB4-20261020-10-plate-demo-match-sheet5-JP4-serial.log
+2bdf8b92e08e95a937a548cb725338ab7114548fc8872b09dfbc46da153627ee      101718  logs/plate/PB4-20261020-13-plate-demo-match-sheet5-JP4-battery-serial.log
+e644d9ffa800b6cf7f18aa2490a99bdb90deea7402917f3f13275d4f17d3bc2a       98908  logs/plate/PB4-20261020-15-plate-demo-match-sheet5-JP4-cold-boot-serial.log
+f0f92f19893922ec5142a73295a0b18272008c02f2b2bc2d4291fb045c420c21       21429  logs/plate2-20261021/boot.log
+416f88e8c8a809de43ce339a774f0a4153636b36b46ce1284c9636866ae05e6b       27212  logs/plate2-20261021/com3_step2.log
+d242e46eb187bd1e66a375e03c33c158e83702e53db1a486be9aeaeb094c8a3c       13551  logs/plate2-20261021/com3_step2b.log
+dc1bbbeb8f8c1e8c2f5ee73f9f34fdead84b6a79581e56d481ccaa67aafb166c      107288  logs/plate2-20261021/com3_step2c.log
+70dd5266762c561b28eafa961c0d3652eccbe2b03221ea4a49325d402245a10c        4171  logs/plate2-20261021/com3_step3.log
+4955679d3bebe02f83444dcd9ac1abcd2cb110c360c551388a19d6a3926b5146       16449  logs/plate2-20261021/com3_step3b.log
+bd9ad0a96bd29424bc0e84970b37b01d67bc61dc421428a58e7133fce2446060          79  logs/plate2-20261021/com3_step4a.log
+4a1dce88d69f5e916aee1db422c79d941dabe2762a963bd3513d100406fe42ae        4168  logs/plate2-20261021/com3_step4b.log
+50e057687f0df764bf8b93778aa1ab09a8596b5ad78ab767f34c68e3dc00d20c      165289  logs/plate2-20261021/com3_step5.log
+17b9a32a6a156c280678dfde26caa90437916e06b1c6c790afea89646f4307d1       82252  logs/sheet-check/PB4-20261017-01-sheet-check-JP4.log
+f0205d6f6ba83edb4c6cfa58574f6f40c119851639439fe1ddda0ae8a7872502       85201  logs/sheet-check/sheet-check-isaac-sheet-20261015.log
+db604ba3ea3f3277624485490968008ec5cfd11350ea4fb9eb958686fdae33d6        7166  logs/sheet/05_Border_Test.txt
+975352840863805075a3c6fa8f8003df73d8330653a151fd467fe22c8c4e5c84        4542  logs/sheet/10ml_test.txt
+c397be939946edb1546000464ae9d39ca29a27feb94418384582e9f04afb4b68        9514  logs/sheet/20_Per_PG_ReTest.txt
+4575060269e05479e90cac937494b85515fedceacdd4b16c215ee493b76b5070       18115  logs/sheet/20_Per_PG_Test.txt
+4cca3cc0fffc33ea09c6c28636b17e91d419950c2a43a84fd84f479d76ec81e9        4455  logs/sheet/BTM_RT_SQ_Test.txt
+404e083e6b4bdd4511d4ee01bdb45402f9f15aea23caa3f3e65d6bb8a75078f3        5782  logs/sheet/Border_Test.txt
+fa4999165c5062e79be0b61dd690f84dbaa2fd61098db3fe7a48ae5a1f25a43a        8138  logs/sheet/IPA_ReTest.txt
+8ba22eb201f6254615c419ac9d74a925d9f19ab066786fbb939c99059cb19573        7448  logs/sheet/IPA_Test.txt
+98f898833088bcf9ca595fae13764fd309fd5b9fa7b029059197665ac5d72020        4066  logs/sheet/Noise_Test_Terminal_Out.txt
+5ae256e4051ef29d4abd25c63b01d1dfa813991851b9398235e00857e892580f       15909  logs/sheet/Noise_Test_Working_CIN2.txt
+aabcd378cb2dc9830a1c3658a48f8ef3eefbfdd28ac334364baa848942e81e30       10661  logs/sheet/OFST_GRD_Test.txt
+eff6808c9636db217d596cedf75374620e3d75752040e34453cbec4b28fdd82c       11893  logs/sheet/Oil_ReTest.txt
+36f998eac64332e9f3a5be1abdd5d6a2b101a505c67d919a72d322bff0904ccc       12253  logs/sheet/Oil_Test.txt
+b89acfb16cf7fe9b821f608eaafb59af5f4ad4455b9cc0e275a9f15ce23fd9eb       33424  logs/sheet/Oil_Wipe_ReTest.txt
+e60b328ecc3409ae4fe28d02f82ed0c67ffe600209745bd1350b5e6c3df8aa02        5914  logs/sheet/Test_1.txt
+062d061cf6b2f38ae4af0e86e55f467b856eca3e3eb4e1313ce8a3a52d12f2e7       18432  logs/sheet/Test_10 1.txt
+062d061cf6b2f38ae4af0e86e55f467b856eca3e3eb4e1313ce8a3a52d12f2e7       18432  logs/sheet/Test_10.txt
+f8cae3b558ddb343a168bd81841742ae1e180e0c8e9e72d58b33d2d4bd67ee59        4475  logs/sheet/Test_12.txt
+f5e15477c290383eb14f44b249e04cff606d067077e592365fcf773a3a64cb74        3472  logs/sheet/Test_13.txt
+8145984ef3c80bfc935e91f924464a4a4ec09013a49ad0d35f581e0c78fc1db4        6543  logs/sheet/Test_14.txt
+9f0d54adf7f9dbc59e1f95e658fb0ca9cedf94f64f8ee87b64a7cd5211bc455f        3604  logs/sheet/Test_15.txt
+11546a7ef3da52c02aa078ae676f0eac4332a74c9d3bfed74af9321b395e82f7        3317  logs/sheet/Test_16.txt
+e25f8f33e05ea21f08797017ed8395cea7a0d80113b43e24eb4e956a13d904b0        7807  logs/sheet/Test_2.txt
+1e85402fe1116b85eaeee87051f797e0a0b5ff11b4777d2d84740f83c39d2597        4687  logs/sheet/Test_3.txt
+d13269bd183973442bc67e0ab812ab2a57d4454ff9af15e0fc49c4b27c70cd6c        3179  logs/sheet/Test_4.txt
+8b6cf02b5350b71f8595f7d7574df1e23e30ad281b2c51d80df75afdb3a31ef4        3440  logs/sheet/Test_5.txt
+3078d61cecd75a368bb30d2ad72c05713a4852dc1b1a5472b929047d507731bc        3005  logs/sheet/Test_6.txt
+af634e551ecb6b42c618c811dc398fe4b567207714387750024678a5198ad1e0        5615  logs/sheet/Test_7.txt
+ede44914a364d7b037191af33dd380c9320fe2c3060ff597b8e10a2c4b3f988d        6978  logs/sheet/Test_8.txt
+1cc39352c1044ff05b6c4214885f03a4ab85dbcd4d828f4acfad7c3929573689        8146  logs/sheet/Test_9.txt
+125f81993964bd84fd177d780b680423a4c2ee52e33193fd3954725e86f10d66        9378  logs/sheet/Water_Test.txt
+32c98008ed85655b098d874e5441b98c336a239fc35da8456d2fc44069bf1d80       15263  logs/sheet/Water_Wipe_ReTest.txt
+2f8015dbebc8aac1eed72eb99c98dfd1615b313c79918aeb2b8e4b0eedc238ec        4726  logs/sheet/sheet_cmr.py
+2d922520e2d54ee03d8867db76d0453cf4a9c27610cc283af7da3b3f1cf359de       20526  scope/scope_0.png
+824de10031f5572eb4d0452db9ad67e67e084fd7d2fc9aa0d7ae995280538416       81141  scope/scope_1.csv
+0941bac30202b81a6553a5a88567527d7f42f7f68769375f05134c58d5aee423       18241  scope/scope_10.png
+79cc531051bce04f9231dc4693a842274870246feb35967013638ef257a5c1d8       83585  scope/scope_11.csv
+46003aa6a0236595b71617fa78c91e2e23953d8770506d9f68ca65ea77cf35a5       20323  scope/scope_12.png
+f458290d3742b96968f533c4caf8ee13083de6e842c6787c88d8d8269f1a2a6d       50472  scope/scope_13.csv
+3e9df10a4351986e9d9f66199132248bb8eebe5820ffc416857242ee29c71a50       19922  scope/scope_14.png
+fd42810e932e6eb606e5bd6447196c6ebdc30df3f8e8b3abb61aa54de30625c3       50496  scope/scope_15.csv
+a0a3d91483f89af235f5e1c6aec1487d4e1c3ea1cb46dbd5d73e39633616dc54       19224  scope/scope_2.png
+82d91bc33cba3996671cba8d73848282f49767cdd3a8b77f64b6e4ce248e2b0b       81141  scope/scope_3.csv
+e28be479cd190e8cb986275d048da92beccef6a5618df7d7b548b1e31691f69e       18761  scope/scope_4.png
+76086b79baa2cd43ad0264dc3a15d651bba4d34f5aea23958641fb2a2d288c5e       81141  scope/scope_5.csv
+d32effcf2ebab94b4067acadf72c5ca2a20bb723b5b109e3d028dfb28e183cb1       18788  scope/scope_6.png
+21a705adf33bd7240dd88963757388b5a0f22c8db2631f55293e425da1f9f415       81141  scope/scope_7.csv
+d4b59fe5dfa335e29cb87c7fcc842ce36c597af06fe6aedb37a0073e2572d469       52016  scope/scope_8.png
+7b36fb5f94eb4273260f784914667ef98718f847273b740b1427540adf79e7e9       79881  scope/scope_9.csv
+46eaaacfbfe2d2a570837fff839b1263b6ed8ecb767fa7117e130f342c2b18c1       11148  tests/pytest_log_20261010.txt
+d1ac9610cfad988b992e0dbc167085737dc3adc9678d321667f383c45f0d419f       10984  tests/pytest_log_20261011.txt
+67627e18ca73123997e8f4b097c031351bbf286f48bb7fd95351627adc831a71       23576  tests/pytest_log_20261014.txt
+4b657d0f53e9bc3d208ee69781ba9d8e6acc1e70e60b608de5fc1ff613ea1aef       19574  tests/pytest_log_20261018.txt
+742f77344a6c8e9046908aa705e5f8372a974ce5a6dec5e0b62fcb2b315991a4       98288  wcca/WCCA_Power_Sensor_Boards.xlsx
